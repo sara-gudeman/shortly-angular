@@ -5,6 +5,12 @@ angular.module('shortly', [
   'shortly.auth',
   'ngRoute'
 ])
+.directive('navigationBar', function() {
+  return {
+      restrict: 'E',
+      templateUrl: 'app/navigation.html'
+  };
+})
 .config(function($routeProvider, $httpProvider) {
   $routeProvider
     .when('/signin', {

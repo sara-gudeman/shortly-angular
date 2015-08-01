@@ -1,12 +1,6 @@
 <div id='container'>
   <!-- Your html here -->
-  <div class='navigation'>
-    <ul>
-      <li><a href='#/links' class='index'>All Links</a></li>
-      <li><a href='#/shorten' class='create'>Shorten</a></li>
-      <li><a ng-click='logout()' class='logout'>Logout</a></li>
-    </ul>
-  </div>
+  <navigation-bar></navigation-bar>
 
   <input type='text' placeholder='Search for website...' ng-model='searchText'>
   <div class='link' ng-repeat='link in data.links | orderBy: "-visits" | filter:searchText'>

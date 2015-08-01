@@ -1,12 +1,6 @@
 <div id='container'>
-<!-- Your code here -->
-  <div class='navigation'>
-    <ul>
-      <li><a href='#/links' class='index'>All Links</a></li>
-      <li><a href='#/shorten' class='create'>Shorten</a></li>
-      <li><a ng-click='logout()' class='logout'>Logout</a></li>
-    </ul>
-  </div>
+  <navigation-bar></navigation-bar>
+
   <form name='shortenForm' class='shortenForm' ng-submit='addLink()' novalidate>
       <input class='text' type='url' name='url' ng-model='link.url' required>
       <p ng-show='shortenForm.url.$invalid && shortenForm.url.$dirty'>Enter valid url</p>
