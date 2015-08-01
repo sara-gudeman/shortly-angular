@@ -114,10 +114,14 @@ input[type=url]:focus {
 }
 
 
-.error {
+.shortenForm input.ng-invalid.ng-dirty {
   border: red solid 4px;
   padding: 10px;
   margin: 0 10px;
+}
+
+.signupForm input.ng-invalid.ng-touched {
+  border: red solid 2px;
 }
 
 .clean {
