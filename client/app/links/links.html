@@ -4,10 +4,12 @@
     <ul>
       <li><a href='#/links' class='index'>All Links</a></li>
       <li><a href='#/shorten' class='create'>Shorten</a></li>
+      <li><a ng-click='logout()' class='logout'>Logout</a></li>
     </ul>
-      <!-- <a href='/logout' class='logout'>Logout</a> -->
-    </div>
-  <div class='link' ng-repeat='link in data.links'>
+  </div>
+
+  <input type='text' placeholder='Search for website...' ng-model='searchText'>
+  <div class='link' ng-repeat='link in data.links | orderBy: "-visits" | filter:searchText'>
   <!-- {{ link }} -->
   <div class='info'>
       <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>

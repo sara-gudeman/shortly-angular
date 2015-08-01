@@ -4,8 +4,8 @@
     <ul>
       <li><a href='#/links' class='index'>All Links</a></li>
       <li><a href='#/shorten' class='create'>Shorten</a></li>
+      <li><a ng-click='logout()' class='logout'>Logout</a></li>
     </ul>
-      <!-- <a href='/logout' class='logout'>Logout</a> -->
   </div>
   <form name='shortenForm' class='shortenForm' ng-submit='addLink()' novalidate>
       <input class='text' type='url' name='url' ng-model='link.url' required>
